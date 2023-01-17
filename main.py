@@ -1,11 +1,8 @@
 import streamlit as st
 from PIL import Image
-import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 import torch;
 import os;
-
 from torch import nn
 from transformers import SegformerFeatureExtractor
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
