@@ -5,9 +5,8 @@ import torch;
 import os;
 from torch import nn
 from transformers import SegformerFeatureExtractor
+
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
-
-
 palette = [[0, 0, 0],
            [128, 64, 128],
            [130, 76, 0],
