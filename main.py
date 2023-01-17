@@ -64,7 +64,7 @@ def predict(img_path):
 
     img = np.array(image) * 0.5 + color_seg * 0.5
     img = img.astype(np.uint8)
-    return img;
+    return img,color_seg;
 
 
 
@@ -73,7 +73,8 @@ st.title("Image Segmentation with SegFormer")
 uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
-    img=predict(uploaded_file)
-    st.image(img)
+    img,color_seg=predict(uploaded_file);
+    st.image(color_seg);
+    st.image(img);
 
 
